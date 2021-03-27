@@ -8,7 +8,7 @@
   "scripts": {
     "start": "nodemon build/index.js",
     "build": "tsc",
-    "dev": "npx tsc-watch --onSuccess '\node build/index.js'"
+    "dev": "npx tsc-watch --onSuccess \"node build/index.js\""
   },
   "dependencies": {
     "discord.js": "^12.5.1",
