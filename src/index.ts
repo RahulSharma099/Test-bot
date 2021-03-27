@@ -41,7 +41,7 @@ client.on("message", (message) => {
       }
       break;
     case "embed":
-      const embed = new Discord.MessageEmbed()
+      const embed = new MessageEmbed()
         .setTitle("User Information")
         .addField("Player Name ", message.author.username, true)
         .addField("version is ", version, true)
