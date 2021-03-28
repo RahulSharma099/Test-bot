@@ -20,7 +20,7 @@ client.on("message", (message) => {
     case "ping":
       message.channel.send("Pong!");
       break;
-    case "website":
+    case "github":
       if (!args[1]) {
         return message.reply("Error Please define a second Argument");
       }
