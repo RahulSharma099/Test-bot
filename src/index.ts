@@ -21,7 +21,10 @@ client.on("message", (message) => {
       message.channel.send("Pong!");
       break;
     case "website":
-      message.channel.send("https://github.com/RahulSharma099");
+      if (!args[1]) {
+        return message.reply("Error Please define a second Argument");
+      }
+      message.channel.send(`https://github.com/${args[1]}`);
       break;
     case "info":
       if (!args[1]) {
@@ -40,12 +43,15 @@ client.on("message", (message) => {
         message.channel.bulkDelete(args[1]);
       }
       break;
+    case "delChannel":
+      message.channel.delete();
+      break;
     case "embed":
       const embed = new MessageEmbed()
         .setTitle("User Information")
         .addField("Player Name ", message.author.username, true)
         .addField("version is ", version, true)
-        .addField("Current server", message.guild?.name)
+        .addField("Current server", message.guild?.name,true)
         .setColor("#F1C40f")
         .setThumbnail(message.author.displayAvatarURL())
         .setFooter("Made with 💕 by Rahul Sharma, Riju, and Bhavya");
@@ -53,5 +59,6 @@ client.on("message", (message) => {
       break;
   }
 });
-
 client.login(process.env.TOKEN);
+
+
