@@ -54,7 +54,7 @@ client.on("message", (message) => {
         .addField("Current server", message.guild?.name,true)
         .setColor("#F1C40f")
         .setThumbnail(message.author.displayAvatarURL())
-        .setFooter("Made with 💕 by Rahul Sharma");
+        .setFooter("Made with 💕 by Rahul Sharma, Riju, and Bhavya");
       message.channel.send({ embed });
       break;
   }
