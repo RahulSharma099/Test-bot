@@ -86,7 +86,7 @@ client.on("message", (message) => {
           (role) => role.name === "Mute"
         );
         let memberTarget = message.guild?.members.cache.get(target.id);
-        memberTarget?.roles.remove(mainRole?.id);
+        memberTarget?.roles.remove(mainRole?.id!);
       } else {
         message.reply("Can't find that user 👾");
       }
